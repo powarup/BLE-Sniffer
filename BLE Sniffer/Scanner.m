@@ -10,6 +10,21 @@
 
 @implementation Scanner
 
++(instancetype)sharedInstance
+{
+    // 1
+    static Scanner *_sharedInstance = nil;
+    
+    // 2
+    static dispatch_once_t oncePredicate;
+    
+    // 3
+    dispatch_once(&oncePredicate, ^{
+        _sharedInstance = [[Scanner alloc] init];
+    });
+    return _sharedInstance;
+}
+
 - (instancetype)init
 {
     NSLog(@"[SCANNER] init");
@@ -19,6 +34,8 @@
         _canScan = false;
         _ready = SCANNER_NOT_READY;
         _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+        
+        _seenDevices = [NSMutableDictionary new];
     }
     return self;
 }
@@ -59,7 +76,25 @@
 
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI
 {
-    NSLog(@"[SCANNER] did discover %@, RSSI: %f", peripheral.name, RSSI.floatValue);
+    NSDate *timeDiscovered = [NSDate date];
+    Sighting *thisSighting = [Sighting new];
+    thisSighting.time = timeDiscovered;
+    thisSighting.RSSI = RSSI;
+    
+    NSUUID *seenUUID = peripheral.identifier;
+    
+    bool madeNew = false;
+    SeenDevice *foundDevice = [_seenDevices objectForKey:seenUUID];
+    if (foundDevice) {
+        [foundDevice addSighting:thisSighting];
+    } else {
+        foundDevice = [[SeenDevice alloc] initFromPeripheral:peripheral];
+        [foundDevice addSighting:thisSighting];
+        [_seenDevices setObject:foundDevice forKey:seenUUID];
+        madeNew = true;
+    }
+    
+    NSLog(@"[SCANNER] did see%@ %@ aka %@, RSSI: %i", madeNew ? @" new" : @"", peripheral.identifier.UUIDString, peripheral.name, RSSI.intValue);
 }
 
 @end

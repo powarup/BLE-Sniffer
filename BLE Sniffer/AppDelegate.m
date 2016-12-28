@@ -18,8 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     NSLog(@"[AppDelegate] application launched. Beginning scan stuff");
-    _scanner = [Scanner alloc];
-    if ([_scanner init]) {
+    _scanner = [Scanner sharedInstance];
+    if (_scanner) {
         NSLog(@"[AppDelegate] initialised scanner, asking to start scan");
         [_scanner start];
     } else {
