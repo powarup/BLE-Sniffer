@@ -15,6 +15,7 @@
 		4C0A8D881E141255000E40B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C0A8D861E141255000E40B6 /* LaunchScreen.storyboard */; };
 		4C0A8D931E141256000E40B6 /* BLE_SnifferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8D921E141256000E40B6 /* BLE_SnifferTests.m */; };
 		4C0A8D9E1E141256000E40B6 /* BLE_SnifferUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8D9D1E141256000E40B6 /* BLE_SnifferUITests.m */; };
+		4C0A8DAD1E141535000E40B6 /* Scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8DAC1E141535000E40B6 /* Scanner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		4C0A8D991E141256000E40B6 /* BLE SnifferUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BLE SnifferUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0A8D9D1E141256000E40B6 /* BLE_SnifferUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLE_SnifferUITests.m; sourceTree = "<group>"; };
 		4C0A8D9F1E141256000E40B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C0A8DAB1E141535000E40B6 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		4C0A8DAC1E141535000E40B6 /* Scanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scanner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +106,8 @@
 			children = (
 				4C0A8D7B1E141255000E40B6 /* AppDelegate.h */,
 				4C0A8D7C1E141255000E40B6 /* AppDelegate.m */,
+				4C0A8DAB1E141535000E40B6 /* Scanner.h */,
+				4C0A8DAC1E141535000E40B6 /* Scanner.m */,
 				4C0A8D7E1E141255000E40B6 /* ViewController.h */,
 				4C0A8D7F1E141255000E40B6 /* ViewController.m */,
 				4C0A8D811E141255000E40B6 /* Main.storyboard */,
@@ -207,6 +212,7 @@
 				TargetAttributes = {
 					4C0A8D741E141255000E40B6 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = T5R8H65C2Z;
 						ProvisioningStyle = Automatic;
 					};
 					4C0A8D8D1E141256000E40B6 = {
@@ -275,6 +281,7 @@
 			files = (
 				4C0A8D801E141255000E40B6 /* ViewController.m in Sources */,
 				4C0A8D7D1E141255000E40B6 /* AppDelegate.m in Sources */,
+				4C0A8DAD1E141535000E40B6 /* Scanner.m in Sources */,
 				4C0A8D7A1E141255000E40B6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -424,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T5R8H65C2Z;
 				INFOPLIST_FILE = "BLE Sniffer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.powarup.BLE-Sniffer";
@@ -435,6 +443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = T5R8H65C2Z;
 				INFOPLIST_FILE = "BLE Sniffer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.powarup.BLE-Sniffer";
@@ -507,6 +516,7 @@
 				4C0A8DA41E141256000E40B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C0A8DA51E141256000E40B6 /* Build configuration list for PBXNativeTarget "BLE SnifferTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +525,7 @@
 				4C0A8DA71E141256000E40B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C0A8DA81E141256000E40B6 /* Build configuration list for PBXNativeTarget "BLE SnifferUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +534,7 @@
 				4C0A8DAA1E141256000E40B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
