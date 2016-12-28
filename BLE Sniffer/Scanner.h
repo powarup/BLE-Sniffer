@@ -17,12 +17,15 @@
 
 @property CBCentralManager *centralManager;
 @property NSMutableDictionary *seenDevices;
+@property NSMutableArray *marks;
 @property bool canScan;
 @property int ready;
 
 +(instancetype)sharedInstance;
 -(void)start;
 -(void)stop;
+-(void)mark;
+-(bool)isScanning;
 
 @end
 

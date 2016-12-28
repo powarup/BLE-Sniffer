@@ -36,6 +36,7 @@
         _centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
         
         _seenDevices = [NSMutableDictionary new];
+        _marks = [NSMutableArray new];
     }
     return self;
 }
@@ -61,6 +62,17 @@
     [_centralManager stopScan];
 }
 
+-(void)mark
+{
+    [_marks addObject:[NSDate date]];
+}
+
+-(bool)isScanning {
+    return _centralManager.isScanning;
+}
+
+#pragma mark CBCentralManager delegate methods
+
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central
 {
     bool startScan = false;
@@ -84,17 +96,19 @@
     NSUUID *seenUUID = peripheral.identifier;
     
     bool madeNew = false;
-    SeenDevice *foundDevice = [_seenDevices objectForKey:seenUUID];
+    SeenDevice *foundDevice = [_seenDevices objectForKey:seenUUID.UUIDString];
     if (foundDevice) {
         [foundDevice addSighting:thisSighting];
     } else {
         foundDevice = [[SeenDevice alloc] initFromPeripheral:peripheral];
         [foundDevice addSighting:thisSighting];
-        [_seenDevices setObject:foundDevice forKey:seenUUID];
+        [_seenDevices setObject:foundDevice forKey:seenUUID.UUIDString];
         madeNew = true;
     }
     
     NSLog(@"[SCANNER] did see%@ %@ aka %@, RSSI: %i", madeNew ? @" new" : @"", peripheral.identifier.UUIDString, peripheral.name, RSSI.intValue);
+    
+    
 }
 
 @end

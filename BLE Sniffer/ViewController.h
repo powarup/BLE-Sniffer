@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property IBOutlet UITableView *devicesTableView;
+@property IBOutlet UIButton *scanButton;
+@property IBOutlet UIButton *markButton;
+
+-(void)update;
+-(IBAction)mark:(id)sender;
+-(IBAction)scan:(id)sender;
 
 @end
 

@@ -20,8 +20,8 @@
     NSLog(@"[AppDelegate] application launched. Beginning scan stuff");
     _scanner = [Scanner sharedInstance];
     if (_scanner) {
-        NSLog(@"[AppDelegate] initialised scanner, asking to start scan");
-        [_scanner start];
+        //NSLog(@"[AppDelegate] initialised scanner, asking to start scan");
+        //[_scanner start];
     } else {
         NSLog(@"[AppDelegate] failed to initialise scanner");
     }
