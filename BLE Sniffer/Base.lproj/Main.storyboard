@@ -201,7 +201,7 @@
                                     <constraint firstAttribute="height" constant="60" id="47z-bX-8ms"/>
                                     <constraint firstAttribute="width" constant="60" id="4vv-HY-yIH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="9"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                 <state key="normal" title="export"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
