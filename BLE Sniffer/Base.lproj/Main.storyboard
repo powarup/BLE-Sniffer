@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -157,8 +157,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WlF-vV-bNN">
                                 <rect key="frame" x="0.0" y="15" width="375" height="58"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYZ-Vw-NiO">
-                                        <rect key="frame" x="157" y="14" width="61" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYZ-Vw-NiO">
+                                        <rect key="frame" x="30" y="10" width="265" height="38"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="BEACON">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -167,16 +167,52 @@
                                             <action selector="beacon:" destination="BYZ-38-t0r" eventType="touchDown" id="Hmb-FF-nPI"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XVr-0o-j26">
+                                        <rect key="frame" x="305" y="10" width="60" height="38"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="pkk-Kq-qYq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                        <state key="normal" title="clear">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="clear:" destination="BYZ-38-t0r" eventType="touchDown" id="J5I-rU-RIa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.90128348214285714" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="XVr-0o-j26" secondAttribute="bottom" constant="10" id="EPZ-0d-1hI"/>
+                                    <constraint firstItem="XVr-0o-j26" firstAttribute="leading" secondItem="oYZ-Vw-NiO" secondAttribute="trailing" constant="10" id="Jkk-ke-3zd"/>
                                     <constraint firstItem="oYZ-Vw-NiO" firstAttribute="top" secondItem="WlF-vV-bNN" secondAttribute="top" constant="10" id="KM7-UM-04B"/>
                                     <constraint firstAttribute="height" constant="58" id="P1L-CJ-ZId"/>
+                                    <constraint firstItem="XVr-0o-j26" firstAttribute="top" secondItem="WlF-vV-bNN" secondAttribute="top" constant="10" id="T7q-o8-sME"/>
                                     <constraint firstAttribute="bottom" secondItem="oYZ-Vw-NiO" secondAttribute="bottom" constant="10" id="fQ3-jk-AMd"/>
-                                    <constraint firstAttribute="trailing" secondItem="oYZ-Vw-NiO" secondAttribute="trailing" constant="30" id="n04-2R-VsJ"/>
                                     <constraint firstItem="oYZ-Vw-NiO" firstAttribute="leading" secondItem="WlF-vV-bNN" secondAttribute="leading" constant="30" id="quV-GA-Lug"/>
+                                    <constraint firstAttribute="trailing" secondItem="XVr-0o-j26" secondAttribute="trailing" constant="10" id="sgC-iD-wz4"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUA-T1-S5F">
+                                <rect key="frame" x="10" y="602" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.62354910714285716" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="47z-bX-8ms"/>
+                                    <constraint firstAttribute="width" constant="60" id="4vv-HY-yIH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="9"/>
+                                <state key="normal" title="export"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="exportData:" destination="BYZ-38-t0r" eventType="touchDown" id="hXs-1A-CH1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -193,10 +229,12 @@
                             <constraint firstAttribute="trailing" secondItem="2lt-kA-fdx" secondAttribute="trailing" id="Ud9-kt-SuQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="q98-3I-IUH" secondAttribute="bottom" constant="5" id="VrT-CG-Jqo"/>
                             <constraint firstAttribute="trailing" secondItem="2lt-kA-fdx" secondAttribute="trailing" id="Y3z-5p-obv"/>
+                            <constraint firstItem="bUA-T1-S5F" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="Yp5-o1-z12"/>
                             <constraint firstItem="2lt-kA-fdx" firstAttribute="top" secondItem="w7D-ss-vGm" secondAttribute="bottom" id="bOj-NP-p0A"/>
                             <constraint firstItem="icb-0u-QZ4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="gEe-Xj-DwF"/>
                             <constraint firstItem="icb-0u-QZ4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="jDr-pk-tUh"/>
                             <constraint firstItem="q98-3I-IUH" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" constant="10" id="joP-LJ-1ng"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bUA-T1-S5F" secondAttribute="bottom" constant="5" id="kK2-OF-htP"/>
                             <constraint firstItem="yt0-yQ-3NS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="pOl-7L-Epc"/>
                             <constraint firstItem="2lt-kA-fdx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rfE-We-Fxq"/>
                             <constraint firstItem="2lt-kA-fdx" firstAttribute="top" secondItem="w7D-ss-vGm" secondAttribute="bottom" id="sH7-pk-IQt"/>
@@ -207,7 +245,9 @@
                     </view>
                     <connections>
                         <outlet property="beaconButton" destination="oYZ-Vw-NiO" id="1kn-fb-gAs"/>
+                        <outlet property="clearButton" destination="XVr-0o-j26" id="biH-9O-R7J"/>
                         <outlet property="devicesTableView" destination="w7D-ss-vGm" id="2da-gL-EWD"/>
+                        <outlet property="exportButton" destination="bUA-T1-S5F" id="lyO-Qo-2LG"/>
                         <outlet property="markButton" destination="q98-3I-IUH" id="9lo-pU-TeK"/>
                         <outlet property="scanButton" destination="2lt-kA-fdx" id="q9q-35-y1g"/>
                     </connections>
