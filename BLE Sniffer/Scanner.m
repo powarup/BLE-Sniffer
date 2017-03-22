@@ -49,7 +49,7 @@
     } else if (_ready == SCANNER_READY) {
         if (_canScan) {
             NSLog(@"[SCANNER] starting scan");
-            [_centralManager scanForPeripheralsWithServices:nil options:nil];
+            [_centralManager scanForPeripheralsWithServices:nil options:@{CBCentralManagerScanOptionAllowDuplicatesKey : @YES}];
         } else {
             NSLog(@"[SCANNER] can't scan, Bluetooth isn't on!");
         }
