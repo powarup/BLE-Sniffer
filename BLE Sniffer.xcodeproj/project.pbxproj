@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0688A41E1438F100D82ED5 /* SeenDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0688A31E1438F100D82ED5 /* SeenDevice.m */; };
+		4C0688A71E143F8600D82ED5 /* Sighting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0688A61E143F8600D82ED5 /* Sighting.m */; };
+		4C0688AE1E14462600D82ED5 /* SeenDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0688AC1E14462600D82ED5 /* SeenDeviceTableViewCell.m */; };
 		4C0A8D7A1E141255000E40B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8D791E141255000E40B6 /* main.m */; };
 		4C0A8D7D1E141255000E40B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8D7C1E141255000E40B6 /* AppDelegate.m */; };
 		4C0A8D801E141255000E40B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8D7F1E141255000E40B6 /* ViewController.m */; };
@@ -16,6 +19,10 @@
 		4C0A8D931E141256000E40B6 /* BLE_SnifferTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8D921E141256000E40B6 /* BLE_SnifferTests.m */; };
 		4C0A8D9E1E141256000E40B6 /* BLE_SnifferUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8D9D1E141256000E40B6 /* BLE_SnifferUITests.m */; };
 		4C0A8DAD1E141535000E40B6 /* Scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8DAC1E141535000E40B6 /* Scanner.m */; };
+		4C3FBD171E82C1E900AFB611 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4C3FBD161E82C1E900AFB611 /* Podfile */; };
+		4C3FBD181E82C25700AFB611 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4C3FBD161E82C1E900AFB611 /* Podfile */; };
+		4CDC3BFC1E229F3C00F827E5 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDC3BFB1E229F3C00F827E5 /* Beacon.m */; };
+		B292BD9B236671DCE74E2765 /* libPods-BLE Sniffer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE4354B303CD1B0AC54C1A7 /* libPods-BLE Sniffer.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0688A21E1438F100D82ED5 /* SeenDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeenDevice.h; sourceTree = "<group>"; };
+		4C0688A31E1438F100D82ED5 /* SeenDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeenDevice.m; sourceTree = "<group>"; };
+		4C0688A51E143F8600D82ED5 /* Sighting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sighting.h; sourceTree = "<group>"; };
+		4C0688A61E143F8600D82ED5 /* Sighting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sighting.m; sourceTree = "<group>"; };
+		4C0688AB1E14462600D82ED5 /* SeenDeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SeenDeviceTableViewCell.h; path = ../SeenDeviceTableViewCell.h; sourceTree = "<group>"; };
+		4C0688AC1E14462600D82ED5 /* SeenDeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SeenDeviceTableViewCell.m; path = ../SeenDeviceTableViewCell.m; sourceTree = "<group>"; };
 		4C0A8D751E141255000E40B6 /* BLE Sniffer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLE Sniffer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C0A8D791E141255000E40B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4C0A8D7B1E141255000E40B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +67,12 @@
 		4C0A8D9F1E141256000E40B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C0A8DAB1E141535000E40B6 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
 		4C0A8DAC1E141535000E40B6 /* Scanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scanner.m; sourceTree = "<group>"; };
+		4C3FBD161E82C1E900AFB611 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		4CDC3BFA1E229F3C00F827E5 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
+		4CDC3BFB1E229F3C00F827E5 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
+		8528522B2684F048F59B069B /* Pods-BLE Sniffer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Sniffer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Sniffer/Pods-BLE Sniffer.release.xcconfig"; sourceTree = "<group>"; };
+		BFE4354B303CD1B0AC54C1A7 /* libPods-BLE Sniffer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BLE Sniffer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FB2CAAC7D6F224283F117B /* Pods-BLE Sniffer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Sniffer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Sniffer/Pods-BLE Sniffer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B292BD9B236671DCE74E2765 /* libPods-BLE Sniffer.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +104,13 @@
 		4C0A8D6C1E141255000E40B6 = {
 			isa = PBXGroup;
 			children = (
+				4C3FBD161E82C1E900AFB611 /* Podfile */,
 				4C0A8D771E141255000E40B6 /* BLE Sniffer */,
 				4C0A8D911E141256000E40B6 /* BLE SnifferTests */,
 				4C0A8D9C1E141256000E40B6 /* BLE SnifferUITests */,
 				4C0A8D761E141255000E40B6 /* Products */,
+				9E9D8F2F951DD1AB9656C690 /* Pods */,
+				D27F90E23D50BC6F6438B491 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,8 +131,16 @@
 				4C0A8D7C1E141255000E40B6 /* AppDelegate.m */,
 				4C0A8DAB1E141535000E40B6 /* Scanner.h */,
 				4C0A8DAC1E141535000E40B6 /* Scanner.m */,
+				4CDC3BFA1E229F3C00F827E5 /* Beacon.h */,
+				4CDC3BFB1E229F3C00F827E5 /* Beacon.m */,
+				4C0688A21E1438F100D82ED5 /* SeenDevice.h */,
+				4C0688A31E1438F100D82ED5 /* SeenDevice.m */,
+				4C0688A51E143F8600D82ED5 /* Sighting.h */,
+				4C0688A61E143F8600D82ED5 /* Sighting.m */,
 				4C0A8D7E1E141255000E40B6 /* ViewController.h */,
 				4C0A8D7F1E141255000E40B6 /* ViewController.m */,
+				4C0688AB1E14462600D82ED5 /* SeenDeviceTableViewCell.h */,
+				4C0688AC1E14462600D82ED5 /* SeenDeviceTableViewCell.m */,
 				4C0A8D811E141255000E40B6 /* Main.storyboard */,
 				4C0A8D841E141255000E40B6 /* Assets.xcassets */,
 				4C0A8D861E141255000E40B6 /* LaunchScreen.storyboard */,
@@ -145,6 +176,23 @@
 			path = "BLE SnifferUITests";
 			sourceTree = "<group>";
 		};
+		9E9D8F2F951DD1AB9656C690 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C9FB2CAAC7D6F224283F117B /* Pods-BLE Sniffer.debug.xcconfig */,
+				8528522B2684F048F59B069B /* Pods-BLE Sniffer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D27F90E23D50BC6F6438B491 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFE4354B303CD1B0AC54C1A7 /* libPods-BLE Sniffer.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,9 +200,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C0A8DA21E141256000E40B6 /* Build configuration list for PBXNativeTarget "BLE Sniffer" */;
 			buildPhases = (
+				7B55A74755437ABE4816B959 /* [CP] Check Pods Manifest.lock */,
 				4C0A8D711E141255000E40B6 /* Sources */,
 				4C0A8D721E141255000E40B6 /* Frameworks */,
 				4C0A8D731E141255000E40B6 /* Resources */,
+				2E2BC5898713CB9DDB1F2F97 /* [CP] Embed Pods Frameworks */,
+				43EC59F317FFEA05D832F310 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,6 +305,7 @@
 			files = (
 				4C0A8D881E141255000E40B6 /* LaunchScreen.storyboard in Resources */,
 				4C0A8D851E141255000E40B6 /* Assets.xcassets in Resources */,
+				4C3FBD171E82C1E900AFB611 /* Podfile in Resources */,
 				4C0A8D831E141255000E40B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,10 +321,59 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3FBD181E82C25700AFB611 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E2BC5898713CB9DDB1F2F97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLE Sniffer/Pods-BLE Sniffer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43EC59F317FFEA05D832F310 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BLE Sniffer/Pods-BLE Sniffer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B55A74755437ABE4816B959 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C0A8D711E141255000E40B6 /* Sources */ = {
@@ -280,8 +381,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0A8D801E141255000E40B6 /* ViewController.m in Sources */,
+				4C0688AE1E14462600D82ED5 /* SeenDeviceTableViewCell.m in Sources */,
 				4C0A8D7D1E141255000E40B6 /* AppDelegate.m in Sources */,
+				4CDC3BFC1E229F3C00F827E5 /* Beacon.m in Sources */,
 				4C0A8DAD1E141535000E40B6 /* Scanner.m in Sources */,
+				4C0688A41E1438F100D82ED5 /* SeenDevice.m in Sources */,
+				4C0688A71E143F8600D82ED5 /* Sighting.m in Sources */,
 				4C0A8D7A1E141255000E40B6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +534,7 @@
 		};
 		4C0A8DA31E141256000E40B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9FB2CAAC7D6F224283F117B /* Pods-BLE Sniffer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5R8H65C2Z;
@@ -441,6 +547,7 @@
 		};
 		4C0A8DA41E141256000E40B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8528522B2684F048F59B069B /* Pods-BLE Sniffer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = T5R8H65C2Z;
