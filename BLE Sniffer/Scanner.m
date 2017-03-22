@@ -88,26 +88,30 @@
 
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI
 {
-    NSDate *timeDiscovered = [NSDate date];
-    Sighting *thisSighting = [Sighting new];
-    thisSighting.time = timeDiscovered;
-    thisSighting.RSSI = RSSI;
-    
-    NSUUID *seenUUID = peripheral.identifier;
-    
-    bool madeNew = false;
-    SeenDevice *foundDevice = [_seenDevices objectForKey:seenUUID.UUIDString];
-    if (foundDevice) {
-        [foundDevice addSighting:thisSighting];
-    } else {
-        foundDevice = [[SeenDevice alloc] initFromPeripheral:peripheral];
-        [foundDevice addSighting:thisSighting];
-        [_seenDevices setObject:foundDevice forKey:seenUUID.UUIDString];
-        madeNew = true;
-    }
-    
-    NSLog(@"[SCANNER] did see%@ %@ aka %@, RSSI: %i", madeNew ? @" new" : @"", peripheral.identifier.UUIDString, peripheral.name, RSSI.intValue);
-    
+    //if ([peripheral.name hasPrefix: @"raspberrypi"] || [peripheral.name hasPrefix: @"jsp50"]) {
+        NSDate *timeDiscovered = [NSDate date];
+        Sighting *thisSighting = [Sighting new];
+        thisSighting.time = timeDiscovered;
+        thisSighting.RSSI = RSSI;
+        thisSighting.advertisementData = advertisementData;
+
+        NSUUID *seenUUID = peripheral.identifier;
+
+        bool madeNew = false;
+        SeenDevice *foundDevice = [_seenDevices objectForKey:seenUUID.UUIDString];
+        if (foundDevice) {
+            [foundDevice addSighting:thisSighting];
+        } else {
+            foundDevice = [[SeenDevice alloc] initFromPeripheral:peripheral];
+            [foundDevice addSighting:thisSighting];
+            [_seenDevices setObject:foundDevice forKey:seenUUID.UUIDString];
+            madeNew = true;
+        }
+
+        //NSLog(@"[SCANNER] did see%@ %@ aka %@, RSSI: %i", madeNew ? @" new" : @"", peripheral.identifier.UUIDString, peripheral.name, RSSI.intValue);
+
+        NSLog(@"%@ says %@",peripheral.name, advertisementData);
+    //}
     
 }
 

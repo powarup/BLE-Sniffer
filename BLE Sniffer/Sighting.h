@@ -12,5 +12,8 @@
 
 @property NSDate *time;
 @property NSNumber *RSSI;
+@property NSDictionary<NSString *,id> *advertisementData;
+
+-(NSString*)getAdvertisedLocalName;
 
 @end

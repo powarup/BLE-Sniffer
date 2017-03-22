@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         _peripheral = peripheral;
+        _name = _peripheral.name;
         _sightings = [NSMutableArray new];
     }
     return self;
@@ -23,6 +24,21 @@
 - (void)addSighting:(Sighting*)sighting
 {
     [_sightings addObject:sighting];
+    _name = ([sighting getAdvertisedLocalName]) ?: _name;
+}
+
+-(Sighting *)getLatestSighting {
+    return [_sightings objectAtIndex:([_sightings count] - 1)];
+}
+
+-(NSString *)getSightingsCSV {
+    NSMutableString *csv = [NSMutableString new];
+    [csv appendFormat:@"%@\n",_name];
+    [csv appendString:@"time,RSSI\n"];
+    for (Sighting *s in _sightings) {
+        [csv appendFormat:@"%f,%@\n",[s.time timeIntervalSince1970],s.RSSI];
+    }
+    return csv;
 }
 
 @end

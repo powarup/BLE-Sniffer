@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "Scanner.h"
+#import "Beacon.h"
 #import "SeenDeviceTableViewCell.h"
 
 @interface ViewController ()
@@ -28,6 +29,7 @@
     Scanner *scanner = [Scanner sharedInstance];
     [_devicesTableView reloadData];
     [_scanButton setTitle:([scanner isScanning] ? @"Stop scanning" : @"Start scanning") forState:UIControlStateNormal];
+    [_beaconButton setBackgroundColor:[Beacon sharedInstance].advertising ? [UIColor redColor] : [UIColor lightGrayColor]];
 }
 
 - (IBAction)mark:(id)sender {
@@ -70,9 +72,31 @@
     }
 }
 
+-(void)beacon:(id)sender {
+    Beacon *beacon = [Beacon sharedInstance];
+    if (beacon.advertising) {
+        [beacon stop];
+    } else {
+        [beacon start];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Table view delegate
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSArray *keyArray = [Scanner sharedInstance].seenDevices.allKeys;
+    NSArray *sortedArray = [keyArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    SeenDevice *thisDevice = [[Scanner sharedInstance].seenDevices objectForKey:[sortedArray objectAtIndex:indexPath.row]];
+
+    NSString *csv = [thisDevice getSightingsCSV];
+
+    UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[csv] applicationActivities:nil];
+    [self presentViewController:activityController animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
@@ -94,14 +118,14 @@
     NSArray *sortedArray = [keyArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     SeenDevice *thisDevice = [[Scanner sharedInstance].seenDevices objectForKey:[sortedArray objectAtIndex:indexPath.row]];
     
-    Sighting *lastSighting = [thisDevice.sightings objectAtIndex:([thisDevice.sightings count] - 1)];
+    Sighting *lastSighting = [thisDevice getLatestSighting];
     
     if (thisDevice.peripheral.name) {
         UIFontDescriptor * fontD = [cell.name.font.fontDescriptor
                                     fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitBold];
         cell.name.font = [UIFont fontWithDescriptor:fontD size:0];
 
-        [cell.name setText:thisDevice.peripheral.name];
+        [cell.name setText:thisDevice.name];
     } else {
         UIFontDescriptor * fontD = [cell.name.font.fontDescriptor
                                     fontDescriptorWithSymbolicTraits:UIFontDescriptorTraitItalic];

@@ -10,4 +10,12 @@
 
 @implementation Sighting
 
+-(NSString *)getAdvertisedLocalName {
+    NSString *name = nil;
+    if (_advertisementData) {
+        name = [_advertisementData objectForKey:@"kCBAdvDataLocalName"];
+    }
+    return name;
+}
+
 @end

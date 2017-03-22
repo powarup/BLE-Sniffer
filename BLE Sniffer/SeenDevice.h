@@ -14,8 +14,11 @@
 
 @property CBPeripheral *peripheral;
 @property NSMutableArray *sightings;
+@property NSString *name;
 
 - (instancetype)initFromPeripheral:(CBPeripheral*)peripheral;
 - (void)addSighting:(Sighting*)sighting;
+- (Sighting*)getLatestSighting;
+- (NSString*)getSightingsCSV;
 
 @end
