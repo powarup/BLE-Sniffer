@@ -13,10 +13,14 @@
 @property IBOutlet UITableView *devicesTableView;
 @property IBOutlet UIButton *scanButton;
 @property IBOutlet UIButton *markButton;
+@property IBOutlet UIButton *clearButton;
+@property IBOutlet UIButton *exportButton;
 @property IBOutlet UIButton *beaconButton;
 
 -(void)update;
 -(IBAction)mark:(id)sender;
+-(IBAction)clear:(id)sender;
+-(IBAction)exportData:(id)sender;
 -(IBAction)scan:(id)sender;
 -(IBAction)beacon:(id)sender;
 

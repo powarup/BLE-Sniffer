@@ -16,7 +16,7 @@
 @interface Scanner : NSObject <CBCentralManagerDelegate>
 
 @property CBCentralManager *centralManager;
-@property NSMutableDictionary *seenDevices;
+@property NSMutableDictionary<NSString*,SeenDevice*> *seenDevices;
 @property NSMutableArray *marks;
 @property bool canScan;
 @property int ready;
@@ -26,6 +26,7 @@
 -(void)stop;
 -(void)mark;
 -(bool)isScanning;
+-(void)clear;
 
 @end
 

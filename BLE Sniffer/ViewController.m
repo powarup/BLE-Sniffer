@@ -10,6 +10,7 @@
 #import "Scanner.h"
 #import "Beacon.h"
 #import "SeenDeviceTableViewCell.h"
+#import "Exporter.h"
 
 @interface ViewController ()
 
@@ -47,6 +48,19 @@
                      }
      ];
     NSLog(@"added mark");
+}
+
+- (IBAction)exportData:(id)sender {
+    Scanner *scanner = [Scanner sharedInstance];
+    if (scanner.seenDevices.count > 0) {
+        NSURL *exportURL = [Exporter exportZip];
+        UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[exportURL] applicationActivities:nil];
+        [self presentViewController:activityController animated:YES completion:nil];
+    }
+}
+
+- (IBAction)clear:(id)sender {
+    [[Scanner sharedInstance] clear];
 }
 
 - (IBAction)scan:(id)sender {
@@ -89,14 +103,15 @@
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSArray *keyArray = [Scanner sharedInstance].seenDevices.allKeys;
+    /*NSArray *keyArray = [Scanner sharedInstance].seenDevices.allKeys;
     NSArray *sortedArray = [keyArray sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     SeenDevice *thisDevice = [[Scanner sharedInstance].seenDevices objectForKey:[sortedArray objectAtIndex:indexPath.row]];
 
     NSString *csv = [thisDevice getSightingsCSV];
 
     UIActivityViewController *activityController = [[UIActivityViewController alloc] initWithActivityItems:@[csv] applicationActivities:nil];
-    [self presentViewController:activityController animated:YES completion:nil];
+    [self presentViewController:activityController animated:YES completion:nil];*/
+
 }
 
 #pragma mark - Table view data source

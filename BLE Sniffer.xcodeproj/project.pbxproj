@@ -21,6 +21,7 @@
 		4C0A8DAD1E141535000E40B6 /* Scanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0A8DAC1E141535000E40B6 /* Scanner.m */; };
 		4C3FBD171E82C1E900AFB611 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4C3FBD161E82C1E900AFB611 /* Podfile */; };
 		4C3FBD181E82C25700AFB611 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4C3FBD161E82C1E900AFB611 /* Podfile */; };
+		4C78B6B51E82CA3C00ED06BA /* Exporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C78B6B41E82CA3C00ED06BA /* Exporter.m */; };
 		4CDC3BFC1E229F3C00F827E5 /* Beacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDC3BFB1E229F3C00F827E5 /* Beacon.m */; };
 		B292BD9B236671DCE74E2765 /* libPods-BLE Sniffer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFE4354B303CD1B0AC54C1A7 /* libPods-BLE Sniffer.a */; };
 /* End PBXBuildFile section */
@@ -68,6 +69,8 @@
 		4C0A8DAB1E141535000E40B6 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
 		4C0A8DAC1E141535000E40B6 /* Scanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Scanner.m; sourceTree = "<group>"; };
 		4C3FBD161E82C1E900AFB611 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		4C78B6B31E82CA3C00ED06BA /* Exporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exporter.h; sourceTree = "<group>"; };
+		4C78B6B41E82CA3C00ED06BA /* Exporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exporter.m; sourceTree = "<group>"; };
 		4CDC3BFA1E229F3C00F827E5 /* Beacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beacon.h; sourceTree = "<group>"; };
 		4CDC3BFB1E229F3C00F827E5 /* Beacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beacon.m; sourceTree = "<group>"; };
 		8528522B2684F048F59B069B /* Pods-BLE Sniffer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLE Sniffer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BLE Sniffer/Pods-BLE Sniffer.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				4C0688A61E143F8600D82ED5 /* Sighting.m */,
 				4C0A8D7E1E141255000E40B6 /* ViewController.h */,
 				4C0A8D7F1E141255000E40B6 /* ViewController.m */,
+				4C78B6B31E82CA3C00ED06BA /* Exporter.h */,
+				4C78B6B41E82CA3C00ED06BA /* Exporter.m */,
 				4C0688AB1E14462600D82ED5 /* SeenDeviceTableViewCell.h */,
 				4C0688AC1E14462600D82ED5 /* SeenDeviceTableViewCell.m */,
 				4C0A8D811E141255000E40B6 /* Main.storyboard */,
@@ -381,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0A8D801E141255000E40B6 /* ViewController.m in Sources */,
+				4C78B6B51E82CA3C00ED06BA /* Exporter.m in Sources */,
 				4C0688AE1E14462600D82ED5 /* SeenDeviceTableViewCell.m in Sources */,
 				4C0A8D7D1E141255000E40B6 /* AppDelegate.m in Sources */,
 				4CDC3BFC1E229F3C00F827E5 /* Beacon.m in Sources */,

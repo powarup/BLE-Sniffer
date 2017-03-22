@@ -15,7 +15,7 @@
     self = [super init];
     if (self) {
         _peripheral = peripheral;
-        _name = _peripheral.name;
+        _name = _peripheral.name ?: peripheral.identifier.UUIDString;
         _sightings = [NSMutableArray new];
     }
     return self;

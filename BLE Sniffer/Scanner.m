@@ -71,6 +71,12 @@
     return _centralManager.isScanning;
 }
 
+-(void)clear {
+    [self stop];
+    _seenDevices = [NSMutableDictionary new];
+    _marks = [NSMutableArray new];
+}
+
 #pragma mark CBCentralManager delegate methods
 
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central
