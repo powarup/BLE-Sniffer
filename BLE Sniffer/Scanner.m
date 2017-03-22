@@ -94,6 +94,7 @@
 
 -(void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *,id> *)advertisementData RSSI:(NSNumber *)RSSI
 {
+    if (peripheral.name) {
     //if ([peripheral.name hasPrefix: @"raspberrypi"] || [peripheral.name hasPrefix: @"jsp50"]) {
         NSDate *timeDiscovered = [NSDate date];
         Sighting *thisSighting = [Sighting new];
@@ -117,7 +118,7 @@
         //NSLog(@"[SCANNER] did see%@ %@ aka %@, RSSI: %i", madeNew ? @" new" : @"", peripheral.identifier.UUIDString, peripheral.name, RSSI.intValue);
 
         NSLog(@"%@ says %@",peripheral.name, advertisementData);
-    //}
+    }
     
 }
 
